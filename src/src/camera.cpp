@@ -7,7 +7,11 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/semphr.h"
+#ifdef PLATFORMIO
+#include "freertos/event_groups.h"
+#else
 #include "freertos/Event_groups.h"
+#endif
 #include "esp32/rom/lldesc.h"
 #include "soc/soc.h"
 #include "soc/gpio_sig_map.h"

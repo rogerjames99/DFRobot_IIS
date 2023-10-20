@@ -11,7 +11,12 @@
 */
  
 #include "DFRobot_IIS.h"
+#ifdef PLATFORMIO
+#include "esp_vfs.h"
+#else
 #include "vfs_api.h"
+#endif
+#include "esp_vfs.h"
 #include <sys/unistd.h>
 #include <sys/stat.h>
 #include <dirent.h>

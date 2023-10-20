@@ -25,8 +25,10 @@
 #include "driver/ledc.h"
 #include "driver/sdmmc_types.h"
 #include "sdmmc_cmd.h"
+#ifndef PLATFORMIO
 #include "vfs_api.h"
 #include "FS.h"
+#endif
 #include "src/camera.h"
 
 extern "C" {
